@@ -28,7 +28,7 @@ app.use(express.static('public'));
 
 
 
-mongoose.connect('mongodb+srv://akashthomas33:SkyWalker%4043@cluster0.a7jhjwd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://akashthomas33:SkyWalker%4043@cluster0.a7jhjwd.mongodb.net/elmotors?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to MongoDB');
     })
