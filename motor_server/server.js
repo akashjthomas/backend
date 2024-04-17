@@ -293,7 +293,7 @@ app.post('/api/login', async (req, res) => {
 
    
     try {
-        const existingLogin = await Login.findOne({ email });
+        const existingLogin = await Login.findOne({ email }).maxTimeMS(10000);;
 
         if (existingLogin) {
             const passwordMatch = await bcrypt.compare(password, existingLogin.password);
